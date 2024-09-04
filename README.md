@@ -32,8 +32,32 @@ If everything is set up _correctly_, you should see your new app running in your
 
 This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
 
+### Troubleshooting
+
+#### Android
+
 If you have issues with ANDROID_HOME when building & running on Android Emulator, you may need to run the following command, and then rebuild.
 
 ```bash
 echo "sdk.dir = /Users/$(whoami)/Library/Android/sdk" > android/local.properties
+```
+
+#### IOS
+
+If you are having issues with pod installation, you may need to run one of the following commands, and then rebuild.
+
+Option 1:
+
+```bash
+npm run install:ios
+```
+
+Option 2:
+
+```bash
+cd ios
+
+bundle install
+
+bundle exec pod install
 ```
